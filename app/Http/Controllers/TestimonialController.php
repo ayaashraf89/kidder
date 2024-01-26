@@ -13,7 +13,7 @@ class TestimonialController extends Controller
     public function index()
 {
 $testimonials = Testimonial::all();
-return view("index", compact("testimonials"));
+return view("testimonial", compact("testimonials"));
 }
 
 public function create()

@@ -5,36 +5,52 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">Make Appointment</h1>
-                                <form>
+                                <form action="{{ route ('storeAppointment')}}" method="post">
+                                @csrf
                                     <div class="row g-3">
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
+                                                <input type="text" class="form-control border-0" name=GName id="gname" placeholder="Gurdian Name">
                                                 <label for="gname">Gurdian Name</label>
+                                                @error('Gname')
+                                                {{ $message }}
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
+                                                <input type="email" class="form-control border-0" name=GEmail id="gmail" placeholder="Gurdian Email">
                                                 <label for="gmail">Gurdian Email</label>
+                                                @error('GEmail')
+                                                {{ $message }}
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
+                                                <input type="text" class="form-control border-0" name=ChildName id="cname" placeholder="Child Name">
                                                 <label for="cname">Child Name</label>
+                                                @error('ChildName')
+                                                {{ $message }}
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
+                                                <input type="text" class="form-control border-0" name=ChildAge id="cage" placeholder="Child Age">
                                                 <label for="cage">Child Age</label>
+                                                @error('ChildAge')
+                                                {{ $message }}
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                                <textarea class="form-control border-0" placeholder="Leave a message here" name=message id="message" style="height: 100px"></textarea>
                                                 <label for="message">Message</label>
+                                                @error('message')
+                                                {{ $message }}
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">

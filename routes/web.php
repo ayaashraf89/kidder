@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('testimonial', function () {
-//     return view('testimonial');
-// });
 
 Route::get('index', function () {
     return view('index');
@@ -68,9 +66,16 @@ Route::get('testimonial', function () {
 })->name('testimonial');
 
 
-
+// Testimonials
 Route::post('storeTestimonial', [TestimonialController::class, 'store'])->name('storeTestimonial'); 
 
-Route::get('testimonials', [TestimonialController::class, 'index']);
+Route::get('testimonial', [TestimonialController::class, 'index'])->name('testimonial');
 
 Route::get('addTestimonial', [TestimonialController::class, 'create']);
+
+// Appointments
+Route::post('storeAppointment', [AppointmentController::class, 'store'])->name('storeAppointment'); 
+
+Route::get('appointment', [AppointmentController::class, 'index'])->name('appointment');
+
+Route::get('appointment', [AppointmentController::class, 'create']);

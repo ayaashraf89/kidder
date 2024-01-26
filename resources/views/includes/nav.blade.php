@@ -18,7 +18,7 @@
                             <a href="{{ route ('facility')}}" class="dropdown-item">School Facilities</a>
                             <a href="t{{ route ('team')}}" class="dropdown-item">Popular Teachers</a>
                             <a href="{{ route ('call')}}" class="dropdown-item">Become A Teachers</a>
-                            <a href="{{ route ('appointment')}}" class="dropdown-item">Make Appointment</a>
+                            <a href="{{ route ('storeAppointment')}}" class="dropdown-item">Make Appointment</a>
                             <a href="{{ route ('testimonial')}}" class="dropdown-item">Testimonial</a>
                             <a href="{{ route ('404')}}" class="dropdown-item">404 Error</a>
                         </div>
