@@ -69,8 +69,8 @@ Route::get('testimonial', function () {
 
 
 
-// Route::post('storeTestimonial', [TestimonialController::class, 'store'])->name('storeTestimonial'); 
+Route::post('storeTestimonial', [TestimonialController::class, 'store'])->name('storeTestimonial'); 
 
-// Route::get('testimonials', [TestimonialController::class, 'index']);
+Route::get('testimonials', [TestimonialController::class, 'index']);
 
-// Route::get('addTestimonial', [TestimonialController::class, 'create']);
+Route::get('addTestimonial', [TestimonialController::class, 'create']);

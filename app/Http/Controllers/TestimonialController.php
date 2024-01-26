@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Testimonial;
+use App\Traits\Common;
 
 class TestimonialController extends Controller
 {
+    use Common;
 
     public function index()
 {
